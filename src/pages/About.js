@@ -25,22 +25,14 @@ const About = () => {
         const topPosition = ref.current.getBoundingClientRect().top;
         if (topPosition < 300) {
           ref.current.style.opacity = 1;
-          if (index == 1) {
-            ref.current.style.marginLeft = '0vw';
-            return;
-          }
           ref.current.style.marginRight = '0vw';
           return;
         }
         ref.current.style.opacity = 0;
-        if (index == 1) {
-          ref.current.style.marginLeft = '20vw';
-          return;
-        }
         ref.current.style.marginRight = '20vw';
       });
 
-      [firstRef, secondRef, thirdRef, fourthRef].forEach((ref) => {
+      [firstRef, secondRef, thirdRef].forEach((ref) => {
         if (!ref?.current) return;
         const topPosition = ref.current.getBoundingClientRect().top;
         if (topPosition < 250) {
@@ -171,8 +163,6 @@ const About = () => {
           <div
             className="section-texts"
             style={{
-              marginTop: '13vw',
-              paddingBottom: '2vw',
               width: '100%',
               maxWidth: '100%',
               marginRight: '0%',
@@ -181,7 +171,13 @@ const About = () => {
             <h1 className="section-texts-number">03.</h1>
             <h1 className="section-texts-title">Contact</h1>
             <h2>delpiahugo@gmail.com</h2>
-            <h2>Linkedin</h2>
+            <a
+              href="https://www.linkedin.com/in/hugo-del-pia/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <h2>Linkedin</h2>
+            </a>
           </div>
           <div style={{ width: '50%' }}></div>
         </div>

@@ -7,7 +7,6 @@ const Plante = () => {
   const firstRef = useRef(null);
   const secondRef = useRef(null);
   const thirdRef = useRef(null);
-  const fourthRef = useRef(null);
 
   const firstImg = useRef(null);
   const secondImg = useRef(null);
@@ -21,22 +20,14 @@ const Plante = () => {
         const topPosition = ref.current.getBoundingClientRect().top;
         if (topPosition < 300) {
           ref.current.style.opacity = 1;
-          if (index == 1) {
-            ref.current.style.marginLeft = '0vw';
-            return;
-          }
           ref.current.style.marginRight = '0vw';
           return;
         }
         ref.current.style.opacity = 0;
-        if (index == 1) {
-          ref.current.style.marginLeft = '20vw';
-          return;
-        }
         ref.current.style.marginRight = '20vw';
       });
 
-      [firstRef, secondRef, thirdRef, fourthRef].forEach((ref) => {
+      [firstRef, secondRef, thirdRef].forEach((ref) => {
         if (!ref?.current) return;
         const topPosition = ref.current.getBoundingClientRect().top;
         if (topPosition < 250) {
@@ -152,7 +143,7 @@ const Plante = () => {
         </div>
         <div className="section" style={{ paddingBottom: 0 }}>
           <div className="section-placeholder"></div>
-          <div className="section-full-image" ref={fourthRef}>
+          <div className="section-full-image">
             <img src={mocks} />
           </div>
         </div>

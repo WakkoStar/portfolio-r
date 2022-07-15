@@ -7,7 +7,6 @@ const Universalis = () => {
   const firstRef = useRef(null);
   const secondRef = useRef(null);
   const thirdRef = useRef(null);
-  const fourthRef = useRef(null);
 
   const firstImg = useRef(null);
   const secondImg = useRef(null);
@@ -21,22 +20,14 @@ const Universalis = () => {
         const topPosition = ref.current.getBoundingClientRect().top;
         if (topPosition < 300) {
           ref.current.style.opacity = 1;
-          if (index == 1) {
-            ref.current.style.marginLeft = '0vw';
-            return;
-          }
           ref.current.style.marginRight = '0vw';
           return;
         }
         ref.current.style.opacity = 0;
-        if (index == 1) {
-          ref.current.style.marginLeft = '20vw';
-          return;
-        }
         ref.current.style.marginRight = '20vw';
       });
 
-      [firstRef, secondRef, thirdRef, fourthRef].forEach((ref) => {
+      [firstRef, secondRef, thirdRef].forEach((ref) => {
         if (!ref?.current) return;
         const topPosition = ref.current.getBoundingClientRect().top;
         if (topPosition < 250) {
@@ -68,21 +59,22 @@ const Universalis = () => {
               du projet
             </h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              massa nunc, fringilla in felis sit amet, interdum auctor lorem.
-              Sed mollis, ipsum et aliquam sollicitudin, ex tortor efficitur
-              felis, sit amet tempor leo justo sed augue. Nulla dapibus, ex
-              vitae varius lobortis, dolor mauris sollicitudin sapien, ac
-              facilisis erat magna at sapien. Maecenas sed massa massa. Quisque
-              non turpis eu mi molestie venenatis ac sit amet diam. Sed egestas
-              purus sit amet lacus finibus, at laoreet libero cursus. Cras
-              sagittis felis purus, sed pretium metus porttitor at. Donec vel
-              ligula commodo, tempus est ut, vestibulum mi. <br />
+              Universalis est une application mobile développée sur Unity, un
+              moteur de jeu. Elle permet d'observer le ciel et affiche de
+              nombreux modèles 3D. L'application fonctionne en temps réel et
+              permet d'observer étoiles planètes et galaxies à l'oeil nu, d'être
+              en pleine immersion dans notre univers.
               <br />
-              Vivamus consectetur, turpis sed ullamcorper vehicula, ante libero
-              aliquet lacus, a ultricies leo lectus a urna. Nullam mauris felis,
-              lacinia nec enim eget, ullamcorper ultrices orci. Morbi venenatis
-              tellus ac sodales accumsan.
+              <br /> Elle permet d'apprendre, ludiquement, à découvrir notre
+              ciel. Les astres proviennent de base de données basé sur notre
+              ciel.
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
             </p>
           </div>
           <div className="section-image">
@@ -98,21 +90,22 @@ const Universalis = () => {
               en temps réel
             </h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              massa nunc, fringilla in felis sit amet, interdum auctor lorem.
-              Sed mollis, ipsum et aliquam sollicitudin, ex tortor efficitur
-              felis, sit amet tempor leo justo sed augue. Nulla dapibus, ex
-              vitae varius lobortis, dolor mauris sollicitudin sapien, ac
-              facilisis erat magna at sapien. Maecenas sed massa massa. Quisque
-              non turpis eu mi molestie venenatis ac sit amet diam. Sed egestas
-              purus sit amet lacus finibus, at laoreet libero cursus. Cras
-              sagittis felis purus, sed pretium metus porttitor at. Donec vel
-              ligula commodo, tempus est ut, vestibulum mi. <br />
+              A partir de la localisation et de la date. Si l'on possède les
+              coordonnées d'un astre à un temps donnée. On peut prédire sa
+              trajectoire future. Dans un premier temps, l'application récupère
+              les coordonnées de toutes les étoiles a partir de la base de
+              données. On calcule ensuite la position actuelle de l'astre.
               <br />
-              Vivamus consectetur, turpis sed ullamcorper vehicula, ante libero
-              aliquet lacus, a ultricies leo lectus a urna. Nullam mauris felis,
-              lacinia nec enim eget, ullamcorper ultrices orci. Morbi venenatis
-              tellus ac sodales accumsan.
+              <br />
+              L'utilisateur déplace ensuite son smartphone autour de lui et va
+              pointer l'astre qu'il souhaite voir. Le smartphone utilise ensuite
+              le gyroscope intégré pour déterminer là ou l'utilisateur regarde
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
             </p>
           </div>
           <div className="section-image">
@@ -148,7 +141,7 @@ const Universalis = () => {
         </div>
         <div className="section" style={{ paddingBottom: 0 }}>
           <div className="section-placeholder"></div>
-          <div className="section-full-image" ref={fourthRef}>
+          <div className="section-full-image">
             <img src={mocks} />
           </div>
         </div>
